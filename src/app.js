@@ -17,10 +17,12 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 import userRouter from "./routes/user.routes.js"
+import { resumeRouter } from "./routes/resume.routes.js";
 
 
 // User route
 app.use("/api/v1/users",userRouter)
+app.use("/api/v1/resumes",resumeRouter)
 
 
 export {app} 

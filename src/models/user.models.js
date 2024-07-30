@@ -6,10 +6,12 @@ const userSchema = new Schema(
     username: {
       type: String,
       required: true,
+      unique: true,
     },
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     refreshToken: {
       type: String,
@@ -18,12 +20,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    resume:[
-        {
-            type:Schema.Types.ObjectId,
-            ref:"Resume"
-        }
-    ]
+    resume: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Resume",
+      },
+    ],
   },
   { timestamps: true }
 );
