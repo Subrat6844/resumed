@@ -115,6 +115,9 @@ const resumeSchema = new Schema(
         startDate: {
           type: Date,
         },
+        currentlyWorking: {
+          type: Boolean,
+        },
         endDate: {
           type: Date,
         },
