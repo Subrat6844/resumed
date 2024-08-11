@@ -111,6 +111,7 @@ const logoutUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
+    domain:".vercel.app",
     httpOnly: true,
     secure: true,
     sameSite: "none",
@@ -142,7 +143,7 @@ const forgetPassword = asyncHandler(async (req, res) => {
   user.passwordResetToken = token;
   user.passwordResetTokenExpiry = tokenExpiry;
   await user.save({ validateBeforeSave: false });
-  const tokenUrl = `http://localhost:5173/reset-password?token=${token}`;
+  const tokenUrl = `https://resumed-app.vercel.app/reset-password?token=${token}`;
   try {
     const info = await sendResetPasswordEmail(tokenUrl, email);
     return res.status(200).json(new ApiResponse(200, { info }, "email sent"));
