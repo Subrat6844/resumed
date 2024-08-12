@@ -113,12 +113,10 @@ const logoutUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
-    domain: ".vercel.app",
-    expires: new Date(Date.now()),
+
     httpOnly: true,
     secure: true,
-    sameSite: "none",
-    path: "/",
+    sameSite: "none"
   };
 
   return res
