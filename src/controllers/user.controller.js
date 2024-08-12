@@ -79,7 +79,7 @@ const loginUser = asyncHandler(async (req, res) => {
     expires: new Date(Date.now()+36000000),
     httpOnly: true,
     secure: true,
-    sameSite: "none",
+    sameSite: "lax",
     path: "/",
   };
 
@@ -116,7 +116,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 
     httpOnly: true,
     secure: true,
-    sameSite: "none"
+    sameSite: "lax",
   };
 
   return res
