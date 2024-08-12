@@ -2,7 +2,7 @@
   "name": "resumed-api-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "dev": "node -r dotenv/config --experimental-json-modules src/index.js"
