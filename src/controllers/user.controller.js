@@ -75,6 +75,7 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
+    domain: ".vercel.app",
     expires: new Date(Date.now()+36000000),
     httpOnly: true,
     secure: true,
@@ -112,6 +113,7 @@ const logoutUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
+    domain: ".vercel.app",
     expires: new Date(Date.now()),
     httpOnly: true,
     secure: true,
