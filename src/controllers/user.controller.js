@@ -75,6 +75,7 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
+    domain:"resumed-app.vercel.app",
     httpOnly: true,
     secure: true,
     sameSite: "none",
@@ -111,6 +112,7 @@ const logoutUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
+    domain:"resumed-app.vercel.app",
     httpOnly: true,
     secure: true,
     sameSite: "none",
