@@ -75,7 +75,7 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 
   const options = {
-    expires: new Date(Date.now()+3600000+3600000+3600000+3600000+3600000),
+    expires: new Date(Date.now()+36000000),
     httpOnly: true,
     secure: true,
     sameSite: "none",
