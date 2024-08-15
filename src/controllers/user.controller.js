@@ -77,6 +77,9 @@ const loginUser = asyncHandler(async (req, res) => {
 	);
 
 	const options = {
+		domain:".vercel.app",
+		path:"/",
+		sameSite:"none",
 		maxAge: 3600000,
 		httpOnly: true,
 		secure: true,
@@ -115,6 +118,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 		httpOnly: true,
 		secure: true,
 		maxAge: 0,
+		sameSite: "none",
 	};
 	return res
 		.status(200)
