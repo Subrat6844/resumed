@@ -10,7 +10,8 @@ dotenv.config({
 console.log(process.env.CORS_ORIGIN);
 app.use(cors({
     origin: process.env.CORS_ORIGIN || "https://resumed-app.vercel.app",
-    allowedHeaders: ["Content-Type", "Authorization","set-cookie"],
+    preflightContinue: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
