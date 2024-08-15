@@ -120,6 +120,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 		maxAge: 0,
 		sameSite: "none",
 		path:"/",
+		
 	};
 	return res
 		.status(200)
