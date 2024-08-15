@@ -119,6 +119,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 		secure: true,
 		maxAge: 0,
     sameSite: "none",
+    domain: ".vercel.app",
 	};
 	return res
 		.status(200)
