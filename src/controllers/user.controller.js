@@ -77,7 +77,6 @@ const loginUser = asyncHandler(async (req, res) => {
 	);
 
 	const options = {
-		domain:"resumed-app.vercel.app",
 		path:"/",
 		sameSite:"none",
 		maxAge: 360000000,
