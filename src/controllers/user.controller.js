@@ -118,6 +118,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 		httpOnly: true,
 		secure: true,
 		maxAge: 0,
+    sameSite: "none",
 	};
 	return res
 		.status(200)
